@@ -1,0 +1,10 @@
+<div class="card-body position-absolute shadow login-container small">
+  <input class="col-12 form-control" type="text" placeholder="Enter User Name" [(ngModel)]="userName">
+  <input class="col-12 form-control mt-2" type="password" placeholder="Enter password" [(ngModel)]="password">
+  <p *ngIf="loginError" class="mt-1 error-text">Incorrect username or password</p>
+  <div class="mt-4">
+    <button [routerLink]="['/register']" routerLinkActive="active" class="btn btn-success col-5 ml-2" [disabled]="!userName">Register</button>
+    <!-- <a [routerLink]="['/register-user',userName]" routerLinkActive="active" class="btn btn-success col-5 ml-2">Register</a> -->
+    <button class="btn btn-primary col-5 ml-3" type="submit" (click)="onSubmit()" [disabled] = "!userName || !password">Submit</button>
+  </div>
+</div>

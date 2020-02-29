@@ -1,0 +1,11 @@
+<div class="p-2">
+  <div class="border-bottom row pb-2">
+      <button class="btn btn-info col-1 ml-3" [routerLink]="['']">Home</button>
+      <h4 class="col-5 mt-1">Welcome to Registration system</h4>
+      <div class="col mr-2 mt-2 text-right">
+          <a class="col-3" [routerLink]="['register-user',name]" routerLinkActive="active">Register an user</a>
+          <a class="col" [routerLink]="['register-company',name]" routerLinkActive="active">Register a company</a>
+      </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
