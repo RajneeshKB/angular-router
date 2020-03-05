@@ -9,26 +9,26 @@ import { CommonServiceService } from '../services/common-service.service';
 })
 export class UserSignInComponent implements OnInit {
 
-  constructor(private router: Router, private commonService:CommonServiceService) { }
+  constructor(private router: Router, private commonService: CommonServiceService) { }
+
+  userName = '';
+  password = '';
+  loginError = false;
 
   ngOnInit() {
   }
 
-  userName = "";
-  password = "";
-  loginError = false;
-
-  onSubmit(){
-    if(this.userName === 'admin' && this.password == 'admin'){
+  onSubmit() {
+    if (this.userName === 'admin' && this.password === 'admin') {
       console.log('logging in');
       this.commonService.updateLoginStatus = true;
       this.commonService.updateLoggedInUserName = this.userName;
       // this.router.navigate(['register-user' + '/test']);
       // navigate will navgate as relative path (default)
-      //navigateByUrl will navigate as absolute path (default)
+      // navigateByUrl will navigate as absolute path (default)
       // this.router.navigate(['user-dashboard', {user: this.userName, optional: 'test'}]);
       this.router.navigateByUrl('user-dashboard');
-    }else{
+    } else {
       this.loginError = true;
     }
   }

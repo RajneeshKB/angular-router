@@ -7,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./register-dashboard.component.css']
 })
 export class RegisterDashboardComponent implements OnInit {
-  name = "";
+  name = '';
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.name = this.route.snapshot.paramMap.has('name') ? this.route.snapshot.paramMap.get('name') : "";
+    this.name = this.route.snapshot.paramMap.has('name') ? this.route.snapshot.paramMap.get('name') : '';
   }
 
 }

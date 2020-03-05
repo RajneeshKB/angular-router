@@ -11,13 +11,13 @@ export class ChatComponent implements OnInit {
   message: string;
   sending = false;
 
-  constructor(private router: Router, private commonServie:CommonServiceService) { }
+  constructor(private router: Router, private commonServie: CommonServiceService) { }
 
   ngOnInit() {
   }
-  
+
   sendMessage() {
-    console.log('sending message',this.message);
+    console.log('sending message', this.message);
     this.sending = true;
     setTimeout(() => {
       this.sending = false;
@@ -25,11 +25,11 @@ export class ChatComponent implements OnInit {
     }, 5000);
   }
 
-  cancel(){
+  cancel() {
     this.closePopup();
   }
 
-  closePopup(){
+  closePopup() {
     this.commonServie.closeChatBox();
   }
 

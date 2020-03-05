@@ -5,12 +5,14 @@ import { RegisterationRoutingModule } from './registeration-routing.module';
 import { RegisterUserComponent } from './register-user/register-user.component';
 import { RegisterCompanyComponent } from './register-company/register-company.component';
 import { RegisterDashboardComponent } from './register-dashboard/register-dashboard.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [RegisterUserComponent, RegisterCompanyComponent, RegisterDashboardComponent],
   imports: [
     CommonModule,
-    RegisterationRoutingModule
+    RegisterationRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class RegisterationModule { }

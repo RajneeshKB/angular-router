@@ -9,19 +9,20 @@ import { CommonServiceService } from 'src/app/services/common-service.service';
 })
 export class UserDashboardComponent implements OnInit {
   // username="";
-  loggedInUser = "";
-  constructor(private route: ActivatedRoute, private router: Router, private commonService:CommonServiceService) { }
+  loggedInUser = '';
+  compList = this.commonService.companyList;
+  constructor(private route: ActivatedRoute, private router: Router, private commonService: CommonServiceService) { }
 
   ngOnInit() {
     // this.username = this.route.snapshot.paramMap.get('user');
     this.loggedInUser = this.commonService.getLoggedInUserName;
   }
 
-  openChatBox(){
+  openChatBox() {
     this.commonService.openChatBox(this.route);
   }
-  
-  openTest(){
-    this.router.navigate(['test'],{relativeTo: this.route});
+
+  openTest() {
+    this.router.navigate(['test'], {relativeTo: this.route});
   }
 }

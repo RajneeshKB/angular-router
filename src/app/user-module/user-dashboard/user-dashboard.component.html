@@ -1,6 +1,27 @@
 <!-- <p>Welcome {{username}}</p> -->
-<p>Welcome to Employee management system</p>
-<router-outlet></router-outlet>
+<!-- <p>Welcome to Employee management system</p>
+<router-outlet></router-outlet> -->
 <router-outlet name="popup"></router-outlet>
 <button class="position-fixed rounded-pill" style="right: 20px;bottom: 20px;" (click)="openChatBox()">Contact us</button>
-<button (click)="openTest()">Open test</button>
+<!-- <button (click)="openTest()">Open test</button> -->
+
+<div class="p-2">
+    <div class="border-bottom row pb-2">
+        <button class="btn btn-info col-1 ml-3" [routerLink]="['']">Home</button>
+        <h4 class="col-5 mt-1">User Management System</h4>
+        <!-- <div class="col mr-2 mt-2 text-right">
+            <a class="col-3" [routerLink]="['register-user',name]" routerLinkActive="active">Register an user</a>
+            <a class="col" [routerLink]="['register-company',name]" routerLinkActive="active">Register a company</a>
+        </div> -->
+    </div>
+    <div class="p-2 row">
+        <div class="col-6 border-right">
+            <strong>List of registered companies</strong>
+            <ul *ngFor="let comp of compList">
+                <li><a [routerLink]="['company-details',comp.id]" routerLinkActive="active">{{comp.name}}</a></li>
+            </ul>
+            <li><a [routerLink]="['company-details',5]" routerLinkActive="active">TTN</a></li>
+        </div>
+        <div class="col-6"><router-outlet></router-outlet></div>
+    </div>
+</div>
