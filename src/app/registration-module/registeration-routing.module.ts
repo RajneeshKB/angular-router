@@ -5,9 +5,12 @@ import { RegisterCompanyComponent } from './register-company/register-company.co
 import { RegisterDashboardComponent } from './register-dashboard/register-dashboard.component';
 import { CanDeactivateGuard } from './can-deactivate.guard';
 
+/**
+ * RegistrationModule is already lazily loaded so empty path is used
+ */
 const routes: Routes = [
   {
-    path: 'register',
+    path: '',
     component: RegisterDashboardComponent,
     children: [
       { path: 'register-user/:name', component: RegisterUserComponent, canDeactivate: [CanDeactivateGuard] },

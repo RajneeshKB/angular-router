@@ -11,6 +11,7 @@ export class RegisterDashboardComponent implements OnInit {
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    console.log('registration module loaded');
     this.name = this.route.snapshot.paramMap.has('name') ? this.route.snapshot.paramMap.get('name') : '';
   }
 

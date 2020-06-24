@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { UserDashboardComponent } from './user-module/user-dashboard/user-dashboard.component';
 import { UserSignInComponent } from './user-sign-in/user-sign-in.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { RegisterationModule } from './registration-module/registeration.module';
+import { RegisterationModule } from './registration-module/registeration.module'; //Being lazily loaded so removed from imports array
 import { UserModule } from './user-module/user.module';
 
 @NgModule({
@@ -22,7 +22,6 @@ import { UserModule } from './user-module/user.module';
     BrowserModule,
     NgbModule,
     FormsModule,
-    RegisterationModule,
     UserModule,
     AppRoutingModule,
   ],
