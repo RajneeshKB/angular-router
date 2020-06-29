@@ -3,8 +3,8 @@
   <input class="col-12 form-control mt-2" type="password" placeholder="Enter password" [(ngModel)]="password" aria-label="ppass">
   <p *ngIf="loginError" class="mt-1 error-text">Incorrect username or password</p>
   <div class="mt-4">
-    <button [routerLink]="['/register']" routerLinkActive="active" class="btn btn-success col-5 ml-2" [disabled]="!userName">Register</button>
+    <button [routerLink]="['/register']" routerLinkActive="active" class="btn btn-success col-5 ml-2">Sign Up</button>
     <!-- <a [routerLink]="['/register-user',userName]" routerLinkActive="active" class="btn btn-success col-5 ml-2">Register</a> -->
-    <button class="btn btn-primary col-5 ml-3" type="submit" (click)="onSubmit()" [disabled] = "!userName || !password">Submit</button>
+    <button class="btn btn-primary col-5 ml-3" type="submit" (click)="onSubmit()" [disabled] = "!userName || !password">Sign In</button>
   </div>
 </div>
